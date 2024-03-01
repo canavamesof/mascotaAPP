@@ -1,0 +1,39 @@
+.item-select:hover{
+    color: #0D6FFD;
+    cursor: pointer;
+    text-decoration: underline;
+}
+body{
+    background-image: url("/Users/canava/Documents/VLA-SENIOR/react/mascotaAPP/public/imagenes/huella1.jpg"); /* Ruta a tu imagen de mascotas */
+
+    background-repeat: no-repeat;
+    background-size: cover; /* Ajusta la imagen al tamaño del cuerpo */
+    background-position: center; /* Centra la imagen */
+  }
+
+.container {
+        width: 100%; /* Asegura que el contenedor ocupe todo el ancho disponible */
+        max-width: 800px; /* Establece un ancho máximo para el contenedor */
+        margin: 0 auto; /* Centra horizontalmente el contenedor */
+        padding: 20px; /* Añade un espacio interno alrededor del contenido */
+}
+
+.custom-button {
+        padding: 10px 20px;
+        margin-top: 20px;
+        border: none;
+        border-radius: 5px;
+        background-color: turquoise; /* Color turquesa */
+        color: rgb(219, 137, 173); /* Texto blanco */
+        cursor: pointer;
+        transition: background-color 0.3s; /* Transición suave del color de fondo */
+          
+        /* Centra el botón horizontalmente */
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    };
+          
+.custom-button:hover {
+        background-color: pink; /* Cambia el color de fondo a rosa al pasar el mouse */
+    }
