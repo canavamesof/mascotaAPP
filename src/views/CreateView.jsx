@@ -26,6 +26,7 @@ const CreateView = () => {
     if (sourceShare.esValidEmail(email)) {
       let newUser = {
         name: nombreDueño,
+        email: email,
         Telefono: Telefono,
         NombreMascota: NombreMascota,
         Tipo: Tipo,
@@ -127,7 +128,7 @@ const CreateView = () => {
         >
           Add
         </button>
-
+{/* redigira a la pagina usuarios  */}
         <button
           className="btn btn-success"
           onClick={() => {

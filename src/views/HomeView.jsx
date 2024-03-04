@@ -11,9 +11,7 @@ const HomeView = () => {
       console.log("Termino login....");
     }, 2000);
   };
-
-
-
+  
   useEffect(() => {
     Login();
   }, []);

@@ -67,6 +67,8 @@ const ReadView = () => {
                     to={{
                       pathname: `/update/${data.id}`,
                     }}
+
+                    // poner contador 
                     className="btn btn-warning"
                   >
                     Update
