@@ -60,12 +60,12 @@ const ReadView = () => {
             return (
               <tr key={index}>
                 <th scope="row">{index + 1}</th>
-                <td>{data.nombreDueno}</td>
+                <td>{data.name}</td>
                 <td>{data.email}</td>
                 <td>{data.Telefono}</td>
                 <td>{data.NombreMascota}</td>
                 <td>{data.Tipo}</td>
-                <td>{data.UltimaVisita}</td>
+                <td>{data.FechaUltimaVisita}</td>
                 <td>{data.Asistencia}</td>
                 <td>
                 <button
