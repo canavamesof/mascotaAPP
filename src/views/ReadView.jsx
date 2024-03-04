@@ -56,7 +56,7 @@ const ReadView = () => {
             return (
               <tr key={index}>
                 <th scope="row">{index + 1}</th>
-                <td>{data.nombreDueño}</td>
+                <td>{data.nombreDueno}</td>
                 <td>{data.email}</td>
                 <td>{data.Telefono}</td>
                 <td>{data.NombreMascota}</td>

@@ -3,7 +3,7 @@ import userServices from "../services/userServices";
 import sourceShare from "../share/sourceShare";
 
 const CreateView = () => {
-  const [nombreDueño, setnombreDueño] = useState("");
+  const [nombreDueno, setnombreDueno] = useState("");
   const [Telefono, setTelefono] = useState("");
   const [email, setemail] = useState("");
   const [NombreMascota, setNombreMascota] = useState("");
@@ -14,7 +14,7 @@ const CreateView = () => {
     // Función para limpiar el formulario
     const clearForm = () => {
       // Establece los estados de los campos del formulario en una cadena vacía
-      setnombreDueño("");
+      setnombreDueno("");
       setTelefono("");
       setemail("");
       setNombreMascota("");
@@ -25,7 +25,7 @@ const CreateView = () => {
   const createUser = async () => {
     if (sourceShare.esValidEmail(email)) {
       let newUser = {
-        name: nombreDueño,
+        name: nombreDueno,
         email: email,
         Telefono: Telefono,
         NombreMascota: NombreMascota,
@@ -59,11 +59,11 @@ const CreateView = () => {
         <div className="mb-3">
           <label className="form-label">Nombre Dueño</label>
           <input
-            value={nombreDueño}
-            onChange={(event) => setnombreDueño(event.target.value)}
+            value={nombreDueno}
+            onChange={(event) => setnombreDueno(event.target.value)}
             type="text"
             className="form-control"
-            id="nombreDueño"
+            id="nombreDueno"
           />
         </div>
         <div className="mb-3">

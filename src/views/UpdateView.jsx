@@ -7,7 +7,7 @@ import sourceShare from "../share/sourceShare";
 const UpdateView = () => {
   let { id } = useParams();
 
-  const [nombreDueño, setNombreDueño] = useState("");
+  const [nombreDueno, setNombreDueno] = useState("");
   const [email, setemail] = useState("");
   const [Telefono, setTelefono] = useState("");
   const [NombreMascota, setNombreMascota] = useState("");
@@ -25,7 +25,7 @@ const UpdateView = () => {
     let data = response.data;
 
     if (response.status === 200 && data.id === id) {
-      setNombreDueño(data.nombreDueño);
+      setNombreDueno(data.nombreDueno);
       setemail(data.email);
       setTelefono(data.Telefono);
       setNombreMascota(data.NombreMascota);
@@ -37,7 +37,7 @@ const UpdateView = () => {
   const updateUser = async () => {
     if (sourceShare.esValidEmail()) {
       let updateUser = {
-        nombreDueño: nombreDueño,
+        nombreDueno: nombreDueno,
         email: email,
         Telefono: Telefono,
         NombreMascota: NombreMascota,
@@ -48,7 +48,7 @@ const UpdateView = () => {
       const response = await userServices.updateUser(updateUser, id);
 
       if (response.data.id) {
-        history.push("/read");
+
       }
     } else {
       setTextAlert("El correo no cumple con el formato");
