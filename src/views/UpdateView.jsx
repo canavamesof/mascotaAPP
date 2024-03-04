@@ -8,6 +8,7 @@ const UpdateView = () => {
   let { id } = useParams();
 
   const [nombreDueño, setNombreDueño] = useState("");
+  const [email, setemail] = useState("");
   const [Telefono, setTelefono] = useState("");
   const [NombreMascota, setNombreMascota] = useState("");
   const [Tipo, setTipo] = useState("");
@@ -25,6 +26,7 @@ const UpdateView = () => {
 
     if (response.status === 200 && data.id === id) {
       setNombreDueño(data.nombreDueño);
+      setemail(data.email);
       setTelefono(data.Telefono);
       setNombreMascota(data.NombreMascota);
       setTipo(data.Tipo);
@@ -36,6 +38,7 @@ const UpdateView = () => {
     if (sourceShare.esValidEmail()) {
       let updateUser = {
         nombreDueño: nombreDueño,
+        email: email,
         Telefono: Telefono,
         NombreMascota: NombreMascota,
         tipo: Tipo,

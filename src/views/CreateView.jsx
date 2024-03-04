@@ -35,7 +35,7 @@ const CreateView = () => {
 
 
       const response = await userServices.createUser(newUser);
-
+      console.log (createUser);
       if (response.data.id) {
         window.location.href = "/read";
       }
@@ -128,7 +128,7 @@ const CreateView = () => {
         >
           Add
         </button>
-{/* redigira a la pagina usuarios  */}
+
         <button
           className="btn btn-success"
           onClick={() => {

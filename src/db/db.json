@@ -7,6 +7,14 @@
       "NombreMascota": "luna",
       "Tipo": "lhasa apso",
       "FechaUltimaVisita": "25 abril 2023"
+    },
+    {
+      "id": "b8f0",
+      "name": "Carlos",
+      "Telefono": "1234566",
+      "NombreMascota": "pepe",
+      "Tipo": "perro",
+      "FechaUltimaVisita": "12 abril 2024"
     }
   ]
 }
