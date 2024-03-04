@@ -1,49 +1,22 @@
 {
   "users": [
     {
-      "id": "8487",
-      "name": "maria",
-      "email": "maria@correo.com",
-      "Telefono": "88888888",
-      "NombreMascota": "canela",
-      "Tipo": "perro",
-      "FechaUltimaVisita": "10 marzo"
-    },
-    {
-      "id": "709d",
-      "name": "luis",
-      "email": "luis@correo.com",
+      "id": "9ca6",
+      "name": "carolina",
+      "email": "caro12@correo.com",
       "Telefono": "23456789",
-      "NombreMascota": "lala",
+      "NombreMascota": "luna",
       "Tipo": "perro",
-      "FechaUltimaVisita": "10"
+      "FechaUltimaVisita": "2024-03-06"
     },
     {
-      "id": "7e2b",
-      "name": "luisa",
-      "email": "luisa@correo.com",
-      "Telefono": "23657809",
-      "NombreMascota": "solcito",
-      "Tipo": "perro",
-      "FechaUltimaVisita": "1"
-    },
-    {
-      "id": "bf96",
-      "name": "brandom",
-      "email": "brandom@correo.com",
-      "Telefono": "88903454",
-      "NombreMascota": "bra",
-      "Tipo": "perro",
-      "FechaUltimaVisita": "abril"
-    },
-    {
-      "id": "d17e",
-      "name": "luiscarlos",
-      "email": "luiscarlos@correo.com",
-      "Telefono": "89674532",
-      "NombreMascota": "lala",
+      "id": "a625",
+      "name": "maria",
+      "email": "mario@correo.com",
+      "Telefono": "89768594",
+      "NombreMascota": "coco",
       "Tipo": "gato",
-      "FechaUltimaVisita": "mayo"
+      "FechaUltimaVisita": "2024-02-29"
     }
   ]
 }
