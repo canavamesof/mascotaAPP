@@ -27,7 +27,7 @@ const CreateView = () => {
   const createUser = async () => {
     if (sourceShare.esValidEmail(email)) {
       let newUser = {
-        name: nombreDueno,
+        nombreDueno: nombreDueno,
         email: email,
         Telefono: Telefono,
         NombreMascota: NombreMascota,
