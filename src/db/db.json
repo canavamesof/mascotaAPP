@@ -8,15 +8,6 @@
       "NombreMascota": "luna",
       "Tipo": "perro",
       "FechaUltimaVisita": "2024-03-06"
-    },
-    {
-      "id": "a625",
-      "name": "maria",
-      "email": "mario@correo.com",
-      "Telefono": "89768594",
-      "NombreMascota": "coco",
-      "Tipo": "gato",
-      "FechaUltimaVisita": "2024-02-29"
     }
   ]
 }

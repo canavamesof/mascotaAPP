@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 const ReadView = () => {
   const [users, setUsers] = useState([]);
-  
+
   useEffect(() => {
     getUsers();
   }, []);
@@ -22,8 +22,14 @@ const ReadView = () => {
       getUsers(); // Actualizar lista de usuarios después de eliminar uno
     }
   };
+  /*
+  const contador = () => {
+    const [count, setCount] = useState();
+    return(
 
-
+    )
+  }
+*/
   return (
     <div className="container mt-5">
       <div className="d-flex justify-content-between align-items-center m-3">
@@ -66,19 +72,20 @@ const ReadView = () => {
                 <td>{data.NombreMascota}</td>
                 <td>{data.Tipo}</td>
                 <td>{data.FechaUltimaVisita}</td>
-                <td>{data.Asistencia}</td>
+                <td><div className="contadorClass"><h1>0</h1>
+                <div className="button-wrapper"><button>-</button><button>+</button></div></div></td>
                 <td>
-                <button
+                  <button
                     className="btn btn-info"
                     onClick={() => {
-                     ;
+                      ;
                     }}
                   >
-{/* // aca deberia de aumentar 1 */}
+                    {/* // aca deberia de aumentar 1 */}
                     Update
                   </button>
-                  </td>
-                  <td>
+                </td>
+                <td>
                   <button
                     className="btn btn-danger"
                     onClick={() => {
