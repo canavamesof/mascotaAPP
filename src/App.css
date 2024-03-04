@@ -4,7 +4,7 @@
     text-decoration: underline;
 }
 body{
-    background-image: url("/Users/canava/Documents/VLA-SENIOR/react/mascotaAPP/public/imagenes/huella1.jpg"); /* Ruta a tu imagen de mascotas */
+    background-image: url(imagenes/huella1.jpg); /* Ruta a tu imagen de mascotas */
 
     background-repeat: no-repeat;
     background-size: cover; /* Ajusta la imagen al tamaño del cuerpo */
