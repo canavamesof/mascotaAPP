@@ -1,6 +1,7 @@
+
 import { useParams } from "react-router-dom";
-import userServices from "../services/userServices";
 import { useEffect, useState } from "react";
+import userServices from "../services/userServices";
 import sourceShare from "../share/sourceShare";
 
 const UpdateView = () => {
@@ -32,8 +33,7 @@ const UpdateView = () => {
   };
 
   const updateUser = async () => {
-    // Validar el correo electrónico si lo obtienes de alguna parte
-      if (sourceShare.esValidemail()) {
+    if (sourceShare.esValidEmail()) {
       let updateUser = {
         nombreDueño: nombreDueño,
         Telefono: Telefono,
@@ -44,15 +44,12 @@ const UpdateView = () => {
 
       const response = await userServices.updateUser(updateUser, id);
 
-      console.log(response);
-
       if (response.data.id) {
-        window.location.href = "/read";
+        history.push("/read");
       }
-} else {
-    //   //Notificar al usuario que el correo es inválido
- setTextAlert("El correo no cumple con el formato");
- }
+    } else {
+      setTextAlert("El correo no cumple con el formato");
+    }
   };
 
   return (
@@ -66,61 +63,7 @@ const UpdateView = () => {
       )}
 
       <form>
-        <div className="mb-3">
-          <label className="form-label">Nombre Dueño</label>
-          <input
-            value={nombreDueño}
-            onChange={(event) => setNombreDueño(event.target.value)}
-            type="text"
-            className="form-control"
-            id="nombreDueño"
-          />
-        </div>
-
-        <div className="mb-3">
-          <label className="form-label">Telefono</label>
-          <input
-            value={Telefono}
-            onChange={(event) => setTelefono(event.target.value)}
-            type="text"
-            className="form-control"
-            id="Telefono"
-          />
-        </div>
-
-        <div className="mb-3">
-          <label className="form-label">Nombre Mascota</label>
-          <input
-            value={NombreMascota}
-            onChange={(event) => setNombreMascota(event.target.value)}
-            type="text"
-            className="form-control"
-            id="NombreMascota"
-          />
-        </div>
-
-        <div className="mb-3">
-          <label className="form-label">Tipo</label>
-          <input
-            value={Tipo}
-            onChange={(event) => setTipo(event.target.value)}
-            type="text"
-            className="form-control"
-            id="Tipo"
-          />
-        </div>
-
-        <div className="mb-3">
-          <label className="form-label">Fecha Ultima Visita</label>
-          <input
-            value={FechaUltimaVisita}
-            onChange={(event) => setFechaUltimaVisita(event.target.value)}
-            type="text"
-            className="form-control"
-            id="FechaUltimaVisita"
-          />
-        </div>
-
+        {/* Aquí van los campos de actualización del usuario */}
         <button
           className="btn btn-info"
           onClick={() => {
@@ -136,4 +79,3 @@ const UpdateView = () => {
 };
 
 export default UpdateView;
-
