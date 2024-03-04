@@ -1,84 +1,87 @@
+// creo que no es importante esta pagina
 
-import { useParams } from "react-router-dom";
-import { useEffect, useState } from "react";
-import userServices from "../services/userServices";
-import sourceShare from "../share/sourceShare";
 
-const UpdateView = () => {
-  let { id } = useParams();
 
-  const [nombreDueno, setNombreDueno] = useState("");
-  const [email, setemail] = useState("");
-  const [Telefono, setTelefono] = useState("");
-  const [NombreMascota, setNombreMascota] = useState("");
-  const [Tipo, setTipo] = useState("");
-  const [FechaUltimaVisita, setFechaUltimaVisita] = useState("");
-  const [textAlert, setTextAlert] = useState("");
+// import { useParams } from "react-router-dom";
+// import { useEffect, useState } from "react";
+// import userServices from "../services/userServices";
+// import sourceShare from "../share/sourceShare";
 
-  useEffect(() => {
-    getUserById();
-  }, []);
+// const UpdateView = () => {
+//   let { id } = useParams();
 
-  const getUserById = async () => {
-    const response = await userServices.getUserById(id);
+//   const [nombreDueno, setNombreDueno] = useState("");
+//   const [email, setemail] = useState("");
+//   const [Telefono, setTelefono] = useState("");
+//   const [NombreMascota, setNombreMascota] = useState("");
+//   const [Tipo, setTipo] = useState("");
+//   const [FechaUltimaVisita, setFechaUltimaVisita] = useState("");
+//   const [textAlert, setTextAlert] = useState("");
 
-    let data = response.data;
+//   useEffect(() => {
+//     getUserById();
+//   }, []);
 
-    if (response.status === 200 && data.id === id) {
-      setNombreDueno(data.nombreDueno);
-      setemail(data.email);
-      setTelefono(data.Telefono);
-      setNombreMascota(data.NombreMascota);
-      setTipo(data.Tipo);
-      setFechaUltimaVisita(data.FechaUltimaVisita);
-    }
-  };
+//   const getUserById = async () => {
+//     const response = await userServices.getUserById(id);
 
-  const updateUser = async () => {
-    if (sourceShare.esValidEmail()) {
-      let updateUser = {
-        nombreDueno: nombreDueno,
-        email: email,
-        Telefono: Telefono,
-        NombreMascota: NombreMascota,
-        tipo: Tipo,
-        FechaUltimaVisita: FechaUltimaVisita
-      };
+//     let data = response.data;
 
-      const response = await userServices.updateUser(updateUser, id);
+//     if (response.status === 200 && data.id === id) {
+//       setNombreDueno(data.nombreDueno);
+//       setemail(data.email);
+//       setTelefono(data.Telefono);
+//       setNombreMascota(data.NombreMascota);
+//       setTipo(data.Tipo);
+//       setFechaUltimaVisita(data.FechaUltimaVisita);
+//     }
+//   };
 
-      if (response.data.id) {
+//   const updateUser = async () => {
+//     if (sourceShare.esValidEmail()) {
+//       let updateUser = {
+//         nombreDueno: nombreDueno,
+//         email: email,
+//         Telefono: Telefono,
+//         NombreMascota: NombreMascota,
+//         tipo: Tipo,
+//         FechaUltimaVisita: FechaUltimaVisita
+//       };
 
-      }
-    } else {
-      setTextAlert("El correo no cumple con el formato");
-    }
-  };
+//       const response = await userServices.updateUser(updateUser, id);
 
-  return (
-    <div className="container mt-5">
-      {textAlert !== "" ? (
-        <div className="alert alert-warning" role="alert">
-          {textAlert}
-        </div>
-      ) : (
-        <></>
-      )}
+//       if (response.data.id) {
 
-      <form>
-        {/* Aquí van los campos de actualización del usuario */}
-        <button
-          className="btn btn-info"
-          onClick={() => {
-            updateUser();
-          }}
-          type="button"
-        >
-          Update
-        </button>
-      </form>
-    </div>
-  );
-};
+//       }
+//     } else {
+//       setTextAlert("El correo no cumple con el formato");
+//     }
+//   };
 
-export default UpdateView;
+//   return (
+//     <div className="container mt-5">
+//       {textAlert !== "" ? (
+//         <div className="alert alert-warning" role="alert">
+//           {textAlert}
+//         </div>
+//       ) : (
+//         <></>
+//       )}
+
+//       <form>
+//         {/* Aquí van los campos de actualización del usuario */}
+//         <button
+//           className="btn btn-info"
+//           onClick={() => {
+//             updateUser();
+//           }}
+//           type="button"
+//         >
+//           Update
+//         </button>
+//       </form>
+//     </div>
+//   );
+// };
+
+// export default UpdateView;
