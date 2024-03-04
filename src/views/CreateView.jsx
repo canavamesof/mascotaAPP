@@ -12,6 +12,7 @@ const CreateView = () => {
   const [Tipo, setTipo] = useState("");
   const [FechaUltimaVisita, setFechaUltimaVisita] = useState("");
   const [textAlert, setTextAlert] = useState("");
+  
 
     // Función para limpiar el formulario
     const clearForm = () => {

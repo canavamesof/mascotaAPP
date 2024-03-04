@@ -6,7 +6,8 @@ import { Link } from "react-router-dom";
 
 const ReadView = () => {
   const [users, setUsers] = useState([]);
-
+  const [count, setCount] = useState(0);
+  
   useEffect(() => {
     getUsers();
   }, []);
@@ -50,7 +51,7 @@ const ReadView = () => {
             <th scope="col">Tipo</th>
             <th scope="col">Ultima visita</th>
             <th scope="col">Asistencia</th>
-            <th scope="col">Update</th>
+            <th scope="col">Visitas</th>
             <th scope="col">Delete</th>
           </tr>
         </thead>
@@ -65,18 +66,11 @@ const ReadView = () => {
                 <td>{data.NombreMascota}</td>
                 <td>{data.Tipo}</td>
                 <td>{data.FechaUltimaVisita}</td>
+                <td>{data.asistencia}</td>
+                  
                 <td>
-                  const contador = () => {
-                   const [count, setCount] = useState(0);
-                  return(
-                  <div className="contadorClass"><h1>{count}</h1>
-                    <div className="button-wrapper"><button>-</button><button>+</button></div></div>
-                  )};</td>
-                <td>
-                  <button className="btn btn-info" onClick={() => { }}>
-                    {/* // aca deberia de aumentar 1 */}
-                    Update
-                  </button>
+                  <div><h1>{count}</h1>
+                  <div><button onClick={()=>setCount(count-1)}>-</button> <button onClick={()=>setCount(count+1)}>+</button></div></div> 
                 </td>
                 <td>
                   <button
@@ -90,7 +84,7 @@ const ReadView = () => {
                 </td>
               </tr>
             );
-          })}
+          })};
         </tbody>
       </table>
     </div>
