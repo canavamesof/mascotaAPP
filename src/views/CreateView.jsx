@@ -1,3 +1,5 @@
+// esta es la pagina donde se ingresa la informacion del usuario
+
 import { useState } from "react";
 import userServices from "../services/userServices";
 import sourceShare from "../share/sourceShare";
@@ -112,7 +114,7 @@ const CreateView = () => {
           <input
             value={FechaUltimaVisita}
             onChange={(event) => setFechaUltimaVisita(event.target.value)}
-            type="text"
+            type="date"
             className="form-control"
             id="FechaUltimaVisita"
           />
