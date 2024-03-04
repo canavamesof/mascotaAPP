@@ -33,7 +33,7 @@ const UpdateView = () => {
 
   const updateUser = async () => {
     // Validar el correo electrónico si lo obtienes de alguna parte
-      if (sourceShare.esValidemail(email)) {
+      if (sourceShare.esValidemail()) {
       let updateUser = {
         nombreDueño: nombreDueño,
         Telefono: Telefono,
