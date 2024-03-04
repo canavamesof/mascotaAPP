@@ -1,10 +1,12 @@
+// esta es la pagina de los usuarios 
+
 import { useState, useEffect } from "react";
 import userServices from "../services/userServices";
 import { Link } from "react-router-dom";
 
 const ReadView = () => {
   const [users, setUsers] = useState([]);
-
+  
   useEffect(() => {
     getUsers();
   }, []);
@@ -20,6 +22,7 @@ const ReadView = () => {
       getUsers(); // Actualizar lista de usuarios después de eliminar uno
     }
   };
+
 
   return (
     <div className="container mt-5">
@@ -47,6 +50,7 @@ const ReadView = () => {
             <th scope="col">Nombre de la Mascota</th>
             <th scope="col">Tipo</th>
             <th scope="col">Ultima visita</th>
+            <th scope="col">Asistencia</th>
             <th scope="col">Update</th>
             <th scope="col">Delete</th>
           </tr>
@@ -62,19 +66,19 @@ const ReadView = () => {
                 <td>{data.NombreMascota}</td>
                 <td>{data.Tipo}</td>
                 <td>{data.UltimaVisita}</td>
+                <td>{data.Asistencia}</td>
                 <td>
-                  <Link
-                    to={{
-                      pathname: `/update/${data.id}`,
+                <button
+                    className="btn btn-info"
+                    onClick={() => {
+                     ;
                     }}
-
-                    // poner contador 
-                    className="btn btn-warning"
                   >
+{/* // aca deberia de aumentar 1 */}
                     Update
-                  </Link>
-                </td>
-                <td>
+                  </button>
+                  </td>
+                  <td>
                   <button
                     className="btn btn-danger"
                     onClick={() => {
