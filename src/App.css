@@ -13,7 +13,7 @@ body{
 
 .container {
         width: 100%; /* Asegura que el contenedor ocupe todo el ancho disponible */
-        max-width: 800px; /* Establece un ancho máximo para el contenedor */
+       
         margin: 0 auto; /* Centra horizontalmente el contenedor */
         padding: 20px; /* Añade un espacio interno alrededor del contenido */
 }
