@@ -50,7 +50,7 @@ const ReadView = () => {
             <th scope="col">Nombre de la Mascota</th>
             <th scope="col">Tipo</th>
             <th scope="col">Ultima visita</th>
-            <th scope="col">Asistencia</th>
+            
             <th scope="col">Visitas</th>
             <th scope="col">Delete</th>
           </tr>
@@ -65,12 +65,10 @@ const ReadView = () => {
                 <td>{data.Telefono}</td>
                 <td>{data.NombreMascota}</td>
                 <td>{data.Tipo}</td>
-                <td>{data.FechaUltimaVisita}</td>
-                <td>{data.asistencia}</td>
-                  
+                <td>{data.FechaUltimaVisita}</td> 
                 <td>
-                  <div><h1>{count}</h1>
-                  <div><button onClick={()=>setCount(count-1)}>-</button> <button onClick={()=>setCount(count+1)}>+</button></div></div> 
+                  <div><h5>{count}</h5>
+                  <div><button className="btn btn-danger" onClick={()=>setCount(count-1)}>-</button> <button className="btn btn-primary" onClick={()=>setCount(count+1)}>+</button></div></div> 
                 </td>
                 <td>
                   <button
