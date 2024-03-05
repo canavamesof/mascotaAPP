@@ -2,7 +2,7 @@
   "users": [
     {
       "id": "9ca6",
-      "name": "carolina",
+      "nombreDueno": "carolina",
       "email": "caro12@correo.com",
       "Telefono": "23456789",
       "NombreMascota": "luna",
