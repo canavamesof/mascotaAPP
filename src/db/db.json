@@ -1,22 +1,3 @@
 {
-  "users": [
-    {
-      "id": "9ca6",
-      "nombreDueno": "carolina",
-      "email": "caro12@correo.com",
-      "Telefono": "23456789",
-      "NombreMascota": "luna",
-      "Tipo": "perro",
-      "FechaUltimaVisita": "2024-03-06"
-    },
-    {
-      "id": "0411",
-      "nombreDueno": "Cali",
-      "email": "adsftg@gmail.com",
-      "Telefono": "5875087665",
-      "NombreMascota": "PPP",
-      "Tipo": "kljg",
-      "FechaUltimaVisita": "2024-03-04"
-    }
-  ]
+  "users": []
 }
